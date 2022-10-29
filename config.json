@@ -257,17 +257,17 @@
     {
       "name": "Coinblocker List",
       "source": "https://zerodot1.gitlab.io/CoinBlockerLists/hosts",
-      "type": "adblock"
+      "type": "hosts"
     },
     {
       "name": "Coinblocker List Browser",
       "source": "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser",
-      "type": "adblock"
+      "type": "hosts"
     },
     {
       "name": "Coinblocker List Optional",
       "source": "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_optional",
-      "type": "adblock"
+      "type": "hosts"
     },
     {
       "name": "OSCP Scott Helme",
@@ -372,7 +372,12 @@
     {
       "name": "Windows Spy Blocker",
       "source": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
-      "type": "adblock"
+      "type": "hosts"
+    },
+    {
+      "name": "HostsFile.org",
+      "source": "https://www.hostsfile.org/Downloads/hosts.txt",
+      "type": "hosts"
     }    
   ],
   "transformations": ["Compress","RemoveModifiers","Validate","Deduplicate"],
