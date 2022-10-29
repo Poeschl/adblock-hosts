@@ -30,7 +30,7 @@ jobs:
       run: cd hostsblock-repro && make && chmod +x hostsblock && mv hostsblock ../ && ls -al ..
 
     - name: 🏗️ Install node packages
-      run: npm ci
+      run: npm install
 
     - name: ⚙️ Create Adblock list
       run: npm run adblock
