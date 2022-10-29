@@ -15,6 +15,16 @@
       "type": "hosts"
     },
     {
+      "name": " Steven Black Hosts Fakenews",
+      "source": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts",
+      "type": "hosts"
+    },
+    {
+      "name": " Steven Black Hosts Gambling",
+      "source": "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts",
+      "type": "hosts"
+    },
+    {
       "name": "Sysctl Cameleon",
       "source": "http://sysctl.org/cameleon/hosts",
       "type": "hosts"
