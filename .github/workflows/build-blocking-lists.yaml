@@ -36,7 +36,7 @@ jobs:
       run: npm run adblock
     
     - name: ⚙️ Create hosts list
-      run: ./hostsblock adblock.txt > hosts
+      run: ./hostsblock adblock.txt > hosts && sed -i 's/^0/127.0.0.1/' hosts
 
     - name: 📦 Create deployment folder
       run: mkdir deploy && mv adblock.txt deploy/ && mv hosts deploy/
