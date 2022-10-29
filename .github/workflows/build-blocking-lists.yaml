@@ -1,0 +1,51 @@
+name: Build blocking lists
+on:
+  push:
+    branches:
+      - "main"
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  build-lists:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: 🏗️ Setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: ↩️ Checkout
+      uses: actions/checkout@v2
+
+    - name: ↩️ Checkout hostsblock repro
+      uses: actions/checkout@v2
+      with:
+        repository: 'wwalexander/hostsblock'
+        path: hostsblock-repro
+
+    - name: 🏗️ Install hostsblock
+      run: cd hostsblock-repro && make && chmod +x hostsblock && mv hostsblock ../ && ls -al ..
+
+    - name: 🏗️ Install node packages
+      run: npm ci
+
+    - name: ⚙️ Create Adblock list
+      run: npm run adblock
+    
+    - name: ⚙️ Create hosts list
+      run: ./hostsblock adblock.txt > hosts
+
+    - name: 📦 Create deployment folder
+      run: mkdir deploy && mv adblock.txt deploy/ && mv hosts deploy/
+
+    - name: 🚐 Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      if: github.ref == 'refs/heads/main'
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: deploy
+        clean: "false"
