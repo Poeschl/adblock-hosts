@@ -32,14 +32,16 @@ jobs:
     - name: 🏗️ Install node packages
       run: npm install
 
-    - name: ⚙️ Create Adblock list
-      run: npm run adblock
+    - name: ⚙️ Create Adblock lists
+      run: npm run adblock && npm run adblock-experimental
     
-    - name: ⚙️ Create hosts list
-      run: ./hostsblock adblock.txt > hosts && sed -i 's/^0/127.0.0.1/' hosts
+    - name: ⚙️ Create hosts lists
+      run: |
+        ./hostsblock adblock.txt > hosts && sed -i 's/^0/127.0.0.1/' hosts &&
+        ./hostsblock adblock-experimental.txt > experimental-hosts && sed -i 's/^0/127.0.0.1/' experimental-hosts
 
     - name: 📦 Create deployment folder
-      run: mkdir deploy && mv adblock.txt deploy/ && mv hosts deploy/
+      run: mkdir deploy && mv adblock*.txt deploy/ && mv *hosts deploy/
 
     - name: 🚐 Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v4

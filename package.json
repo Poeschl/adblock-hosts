@@ -9,6 +9,7 @@
   },
   "engines": { "npm": ">=8.3.0" },
   "scripts": {
-    "adblock": "hostlist-compiler -c config.json -o adblock.txt"
+    "adblock": "hostlist-compiler -c general.json -o adblock.txt",
+    "adblock-experimental": "hostlist-compiler -c experimental.json -o adblock-experimental.txt"
   }
 }
