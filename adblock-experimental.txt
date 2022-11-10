@@ -3,7 +3,7 @@
 ! Description: A combined list of other adblocking and protecting host files and adguard rules. (The experimental rules addon)
 ! Homepage: https://poeschl.github.io/adblock-hosts
 ! License: GPLv3
-! Last modified: 2022-11-09T04:08:10.218Z
+! Last modified: 2022-11-10T04:02:05.918Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.12
 !
