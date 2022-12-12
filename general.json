@@ -390,7 +390,7 @@
       "type": "hosts"
     }    
   ],
-  "transformations": ["Compress","RemoveModifiers","Validate","Deduplicate"],
+  "transformations": ["Validate","Deduplicate"],
   "exclusions": [],
   "exclusions_sources": [],
   "inclusions": [],
