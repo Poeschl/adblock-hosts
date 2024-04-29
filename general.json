@@ -280,16 +280,6 @@
       "type": "hosts"
     },
     {
-      "name": "OSCP Scott Helme",
-      "source": "https://raw.githubusercontent.com/ScottHelme/revocation-endpoints/master/ocsp.txt",
-      "type": "hosts"
-    },
-    {
-      "name": "CRL Scott Helme",
-      "source": "https://raw.githubusercontent.com/ScottHelme/revocation-endpoints/master/crl.txt",
-      "type": "hosts"
-    },
-    {
       "name": "Dan Pollock's List",
       "source": "https://someonewhocares.org/hosts/zero/hosts",
       "type": "hosts"
