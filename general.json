@@ -305,11 +305,6 @@
       "type": "hosts"
     },
     {
-      "name": "andnixsh Ad Block",
-      "source": "https://repo.andnixsh.com/adblocker/hosts",
-      "type": "hosts"
-    },
-    {
       "name": "BlockUnderRadarJunk",
       "source": "https://raw.githubusercontent.com/UnluckyLuke/BlockUnderRadarJunk/master/blockunderradarjunk-list.txt",
       "type": "adblock"
